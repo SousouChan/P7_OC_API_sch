@@ -39,6 +39,6 @@ async def predict_creditnote(data_api: creditnote):
         prediction:"bankrupt customer"
         probability=prediction[0][1]
     return {
-'prediction': prediction,'probability'=probability
+'prediction': prediction,'probability': probability
        
 }
