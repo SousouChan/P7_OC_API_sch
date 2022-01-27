@@ -32,13 +32,13 @@ async def predict_creditnote(data_api: creditnote):
     prediction = loaded_model.predict_proba(X_test.iloc[[index]])
 
     if(prediction[0][0]>0.5):
-        loanprediction:"solvent customer"
+        prediction= "solvent customer"
         probability=prediction[0][0]
     else:
-        loanprediction:"bankrupt customer"
+        prediction= "bankrupt customer"
         probability=prediction[0][1]
     return {
-'prediction': loanprediction,'probability':probability
+'prediction': prediction,'probability':probability
        
 }
      
